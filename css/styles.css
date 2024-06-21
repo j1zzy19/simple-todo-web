@@ -41,3 +41,8 @@ button i {
   font-weight: bold;
   pointer-events: none;
 }
+
+/* javascript classes */
+.hide{
+    display: none;
+}
