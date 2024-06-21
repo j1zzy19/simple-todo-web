@@ -10,6 +10,10 @@ body {
   background: url("../img/bg2.jpg") center/cover no-repeat;
 }
 /* inputs styling */
+input,
+select {
+  padding: 0.25rem 0.5rem;
+}
 button {
   background-color: #fdfdfd;
   color: #102f5e;
@@ -32,8 +36,8 @@ button:hover > i {
   color: #fff;
 }
 
-button i{
-    color: #102f5e;
-    font-weight: bold;
-    pointer-events: none;
+button i {
+  color: #102f5e;
+  font-weight: bold;
+  pointer-events: none;
 }
