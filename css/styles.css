@@ -9,6 +9,7 @@
 body {
   background: url("../img/bg2.jpg") center/cover no-repeat;
 }
+
 /* inputs styling */
 input,
 select {
@@ -45,4 +46,15 @@ button i {
 /* javascript classes */
 .hide{
     display: none;
+}
+
+/* Todo elements  */
+
+/* Todo header */
+.todo-container{
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: #FDFDFD;
+    padding: 1.5rem;
+    border: 15px;
 }
