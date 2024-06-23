@@ -6,6 +6,8 @@ const editForm = document.querySelector('#edit-form');
 const editInput = document.querySelector('#edit-input');
 const cancelEditBtn = document.querySelector('#cancel-edit-btn');
 
+let storedInputValue;
+
 // Functions
 const saveTodo = (text) => {
     const todo = document.createElement("div");
@@ -57,6 +59,11 @@ todoForm.addEventListener("submit", (e) => {
 document.addEventListener("click", (e) => {
     const targetEl = e.target;
     const parentEL = targetEl.closest("div");
+    let todoTitle;
+
+    if (parentEL && parentEL.querySelector("h3")) {
+        todoTitle = parentEL.querySelector("h3").innerText;
+    }
 
     if (targetEl.classList.contains("finish-todo")) {
         parentEL.classList.toggle("done");
@@ -68,6 +75,9 @@ document.addEventListener("click", (e) => {
 
     if (targetEl.classList.contains("edit-todo")) {
         toggleForms();
+
+        editInput.value = todoTitle;
+        storedInputValue.value = todoTitle;
     }
 });
 
