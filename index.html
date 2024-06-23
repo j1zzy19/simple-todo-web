@@ -29,7 +29,7 @@
                 </button>
             </div>
         </form>
-        <form id="edit-form">
+        <form id="edit-form" class="hide">
             <p>Edite sua Tarefa:</p>
             <div class="form-control">
                 <input type="text" id="edit-input">
@@ -37,8 +37,8 @@
                     <i class="fa-solid fa-check-double"></i>
                 </button>
             </div>
+            <button id="cancel-edit-btn">Cancelar</button>
         </form>
-        <button id="cancel-edit-btn">Cancelar</button>
         <div id="toolbar">
             <div id="search">
                 <h4>Pesquisar:</h4>
@@ -58,31 +58,7 @@
                 </select>
             </div>
         </div>
-        <div class="todo-list">
-            <div class="todo done">
-                <h3>Estou Fazendo alguma coisa...</h3>
-                <button class="finish-todo">
-                    <i class="fa-solid fa-check"></i>
-                </button>
-                <button class="edit-todo">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-                <button class="remove-todo">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="todo">
-                <h3>Estudando Javascript</h3>
-                <button class="finish-todo">
-                    <i class="fa-solid fa-check"></i>
-                </button>
-                <button class="edit-todo">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-                <button class="remove-todo">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
+        <div id="todo-list">
         </div>
     </div>
 </body>
