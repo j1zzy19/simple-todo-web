@@ -19,12 +19,12 @@ const saveTodo = (text) => {
     doneBtn.classList.add("finish-todo");
     doneBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
     todo.appendChild(doneBtn);
-    
+
     const editBtn = document.createElement("button");
     editBtn.classList.add("edit-todo");
     editBtn.innerHTML = '<i class="fa-solid fa-pen"></i>';
     todo.appendChild(editBtn);
-    
+
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("remove-todo");
     deleteBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
@@ -46,4 +46,21 @@ todoForm.addEventListener("submit", (e) => {
     if (inputValue) {
         saveTodo(inputValue);
     }
-})
+});
+
+document.addEventListener("click", (e) => {
+    const targetEl = e.target;
+    const parentEL = targetEl.closest("div");
+
+    if (targetEl.classList.contains("finish-todo")) {
+        parentEL.classList.toggle("done");
+    }
+
+    if (targetEl.classList.contains("remove-todo")) {
+        parentEL.remove();
+    }
+
+    if (targetEl.classList.contains("edit-todo")) {
+        console.log("Editou");
+    }
+});
