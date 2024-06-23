@@ -36,6 +36,12 @@ const saveTodo = (text) => {
     todoInput.focus();
 };
 
+const toggleForms = () => {
+    editForm.classList.toggle("hide");
+    todoForm.classList.toggle("hide");
+    todoList.classList.toggle("hide");
+}
+
 // Events
 todoForm.addEventListener("submit", (e) => {
 
@@ -61,6 +67,6 @@ document.addEventListener("click", (e) => {
     }
 
     if (targetEl.classList.contains("edit-todo")) {
-        console.log("Editou");
+        toggleForms();
     }
 });
